@@ -1,0 +1,11 @@
+def Kth_element(arr, K):
+    arr.sort()
+    return arr[-K]
+arr = [3,8,6,2,9,1]
+K = 2
+result = Kth_element(arr, K)
+
+if result is not None:
+    print("Kth element is:", result)
+else:
+    print("Error")
