@@ -1,0 +1,12 @@
+def count(arr, x):
+    occurrences = 0
+    
+    for num in arr:
+        if num == x:
+            occurrences += 1
+    
+    return occurrences
+arr = [0, 1, 1, 0, 2, 3, 4]
+x = 1
+result = count(arr, x)
+print(result)
