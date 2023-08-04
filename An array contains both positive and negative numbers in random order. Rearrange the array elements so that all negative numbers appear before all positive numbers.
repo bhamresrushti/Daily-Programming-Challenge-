@@ -1,0 +1,14 @@
+def rearrange_negatives(arr):
+    neg_count = 0
+    n = len(arr)
+
+    for i in range(n):
+        if arr[i] < 0:
+            arr[i], arr[neg_count] = arr[neg_count], arr[i]
+            neg_count += 1
+
+    return arr
+
+input_arr = [1, -2, 3, -4, 5, -6]
+rearranged = rearrange_negatives(input_arr)
+print(rearranged)
