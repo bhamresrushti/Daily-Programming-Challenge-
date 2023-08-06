@@ -1,0 +1,15 @@
+def element(arr):
+    if not arr:
+        return None, None
+
+    smallest = largest = arr[0]
+
+    for num in arr:
+        smallest = min(smallest, num)
+        largest = max(largest, num)
+
+    return smallest, largest
+
+arr = [-10, -5, -15, -2, -20]
+smallest, largest = element(arr)
+print("Smallest:", smallest, ", Largest:", largest)
