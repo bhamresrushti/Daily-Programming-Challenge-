@@ -1,6 +1,6 @@
 def element(arr):
     if not arr:
-        return None, None
+        return None
 
     smallest = largest = arr[0]
 
