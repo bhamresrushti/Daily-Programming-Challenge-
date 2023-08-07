@@ -1,0 +1,8 @@
+def rotate_left(arr, N):
+    N %= len(arr)
+    return arr[N:] + arr[:N]
+
+arr = [1, 2, 3, 4, 5, 6, 7]
+N = int(input("N: "))
+r_arr = rotate_left(arr, N)
+print("Expected Output:", r_arr)
