@@ -1,0 +1,16 @@
+def roman_to_decimal(s):
+    roman_values = {'I': 1, 'V': 5, 'X': 10, 'L': 50, 'C': 100, 'D': 500, 'M': 1000}
+    
+    decimal_value = 0
+    prev_value = 0
+    
+    for char in s[::-1]:
+        value = roman_values[char]
+        decimal_value += value if value >= prev_value else -value
+        prev_value = value
+    
+    return decimal_value
+
+input_roman = input("Input: ")
+decimal_value = roman_to_decimal(input_roman)
+print("Output:", decimal_value)
