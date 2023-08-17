@@ -1,0 +1,17 @@
+def count_substrings_with_k_distinct_chars(s, k):
+    n = len(s)
+    substrings = set()
+    
+    for i in range(n):
+        distinct_chars = set()
+        for j in range(i, n):
+            distinct_chars.add(s[j])
+            if len(distinct_chars) == k:
+                substrings.add(s[i:j+1])
+    
+    return substrings
+
+input_str = input("Input: ")
+k = int(input("k: "))
+result = count_substrings_with_k_distinct_chars(input_str, k)
+print("Possible substrings", k, "are", result)
